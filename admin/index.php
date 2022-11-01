@@ -2,7 +2,7 @@
 <html class="loading" lang="en" data-textdirection="ltr">
 
     <!-- BEGIN: Head-->
-    <?php include "head.php"?>
+    <?php include "head.php" ?>
     <!-- END: Head-->
 
     <!-- BEGIN: Body-->
@@ -14,7 +14,7 @@
         data-col="">
 
         <!-- BEGIN: Header-->
-      <?php include"header.php"?>
+        <?php include "header.php" ?>
         <!-- END: Header-->
 
         <!-- BEGIN: Main Menu-->
@@ -104,203 +104,27 @@
                 </div>
                 <div class="shadow-bottom"></div>
                 <!-- Horizontal menu content-->
+
+                <!-- START CONTENT MENU -->
                 <div class="navbar-container main-menu-content" data-menu="menu-container">
-                    <!-- include ../vendors/includes/mixins-->
-                    <ul
-                        class="nav navbar-nav"
-                        id="main-menu-navigation"
-                        data-menu="menu-navigation">
-                        <li class="dropdown nav-item" data-menu="dropdown">
-                            <a
-                                class="dropdown-toggle nav-link d-flex align-items-center"
-                                href="index.html"
-                                data-toggle="dropdown">
-                                <i data-feather="home"></i>
-                                <span data-i18n="Dashboards">Dashboards</span></a>
-                            <ul class="dropdown-menu">
-                                <li class="active" data-menu="">
-                                    <a
-                                        class="dropdown-item d-flex align-items-center"
-                                        href="dashboard-analytics.html"
-                                        data-toggle="dropdown"
-                                        data-i18n="Analytics">
-                                        <i data-feather="activity"></i>
-                                        <span data-i18n="Analytics">Analytics</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown nav-item" data-menu="dropdown">
-                            <a
-                                class="dropdown-toggle nav-link d-flex align-items-center"
-                                href="#"
-                                data-toggle="dropdown">
-                                <i data-feather="box"></i>
-                                <span data-i18n="Misc">Misc</span></a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
-                                    <a
-                                        class="dropdown-item d-flex align-items-center dropdown-toggle"
-                                        href="#"
-                                        data-toggle="dropdown"
-                                        data-i18n="Menu Levels">
-                                        <i data-feather="menu"></i>
-                                        <span data-i18n="Menu Levels">Menu Levels</span></a>
-                                    <ul class="dropdown-menu">
-                                        <li data-menu="">
-                                            <a
-                                                class="dropdown-item d-flex align-items-center"
-                                                href="#"
-                                                data-toggle="dropdown"
-                                                data-i18n="Second Level">
-                                                <i data-feather="circle"></i>
-                                                <span data-i18n="Second Level">Second Level 2.1</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="disabled" data-menu="">
-                                    <a
-                                        class="dropdown-item d-flex align-items-center"
-                                        href=""
-                                        data-toggle="dropdown"
-                                        data-i18n="Disabled Menu">
-                                        <i data-feather="eye-off"></i>
-                                        <span data-i18n="Disabled Menu">Disabled Menu</span></a>
-                                </li>
-                                <li data-menu="">
-                                    <a
-                                        class="dropdown-item d-flex align-items-center"
-                                        href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/documentation"
-                                        data-toggle="dropdown"
-                                        data-i18n="Documentation"
-                                        target="_blank">
-                                        <i data-feather="folder"></i>
-                                        <span data-i18n="Documentation">Documentation</span></a>
-                                </li>
-                                <li data-menu="">
-                                    <a
-                                        class="dropdown-item d-flex align-items-center"
-                                        href="https://pixinvent.ticksy.com/"
-                                        data-toggle="dropdown"
-                                        data-i18n="Raise Support"
-                                        target="_blank">
-                                        <i data-feather="life-buoy"></i>
-                                        <span data-i18n="Raise Support">Raise Support</span></a>
-                                </li>
-																
-                            </ul>
-                        </li>
-                    </ul>
+                    <?php include "navbar.php" ?>
                 </div>
+                <!-- END CONTENT MENU -->
+
             </div>
         </div>
         <!-- END: Main Menu-->
 
         <!-- BEGIN: Content-->
-        <div class="app-content content ">
-            <div class="content-overlay"></div>
-            <div class="header-navbar-shadow"></div>
-            <div class="content-wrapper container-xxl p-0">
-                <div class="content-header row"></div>
-                <div class="content-body">
-                    <!-- Dashboard Analytics Start -->
-                    <section id="dashboard-analytics">
-                        <div class="row match-height"></div>
-
-                        <div class="row match-height"></div>
-
-                        <div class="row match-height"></div>
-
-                        <!-- List DataTable -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card invoice-list-wrapper">
-                                    <div class="card-datatable table-responsive">
-                                        <table class="invoice-list-table table">
-                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                    <th>#</th>
-                                                    <th>
-                                                        <i data-feather="trending-up"></i>
-                                                    </th>
-                                                    <th>Client</th>
-                                                    <th>Total</th>
-                                                    <th class="text-truncate">Issued Date</th>
-                                                    <th>Balance</th>
-                                                    <th>Invoice Status</th>
-                                                    <th class="cell-fit">Actions</th>
-                                                </tr>
-                                            </thead>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/ List DataTable -->
-                    </section>
-                    <!-- Dashboard Analytics end -->
-
-                </div>
-            </div>
-        </div>
+        <?php include "content.php" ?>
         <!-- END: Content-->
 
         <div class="sidenav-overlay"></div>
         <div class="drag-target"></div>
 
-        <!-- BEGIN: Footer-->
-        <footer class="footer footer-static footer-light">
-            <p class="clearfix mb-0">
-                <span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2021<a
-                    class="ml-25"
-                    href="https://1.envato.market/pixinvent_portfolio"
-                    target="_blank">Pixinvent</a>
-                    <span class="d-none d-sm-inline-block">, All rights Reserved</span></span><span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span></p>
-        </footer>
-        <button class="btn btn-primary btn-icon scroll-top" type="button">
-            <i data-feather="arrow-up"></i>
-        </button>
-        <!-- END: Footer-->
-
-        <!-- BEGIN: Vendor JS-->
-        <script src="../vendors/app-assets/vendors/js/vendors.min.js"></script>
-        <!-- BEGIN Vendor JS-->
-
-        <!-- BEGIN: Page Vendor JS-->
-        <script src="../vendors/app-assets/vendors/js/ui/jquery.sticky.js"></script>
-        <script src="../vendors/app-assets/vendors/js/charts/apexcharts.min.js"></script>
-        <script src="../vendors/app-assets/vendors/js/extensions/toastr.min.js"></script>
-        <script src="../vendors/app-assets/vendors/js/extensions/moment.min.js"></script>
-        <script
-            src="../vendors/app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
-        <script
-            src="../vendors/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-        <script
-            src="../vendors/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js"></script>
-        <script
-            src="../vendors/app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-        <script
-            src="../vendors/app-assets/vendors/js/tables/datatable/responsive.bootstrap4.min.js"></script>
-        <!-- END: Page Vendor JS-->
-
-        <!-- BEGIN: Theme JS-->
-        <script src="../vendors/app-assets/js/core/app-menu.js"></script>
-        <script src="../vendors/app-assets/js/core/app.js"></script>
-        <!-- END: Theme JS-->
-
-        <!-- BEGIN: Page JS-->
-        <script src="../vendors/app-assets/js/scripts/pages/dashboard-analytics.js"></script>
-        <!-- <script
-        src="../vendors/app-assets/js/scripts/pages/app-invoice-list.js"></script> -->
-        <!-- END: Page JS-->
-
-        <script>
-            $(window).on('load', function () {
-                if (feather) {
-                    feather.replace({width: 14, height: 14});
-                }
-            })
-        </script>
+        <!-- START FOOTER -->
+        <?php include "footer.php"?>
+        <!-- END FOOTER -->
     </body>
     <!-- END: Body-->
 
