@@ -31,6 +31,11 @@
     <script src="../vendors/app-assets/js/core/app.js"></script>
     <!-- END: Theme JS-->
 
+    <script src="../vendors/app-assets/vendors/js/ui/jquery.sticky.js"></script>
+    <!-- <script src="../vendors/app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <script src="../vendors/app-assets/vendors/js/extensions/polyfill.min.js"></script>
+    <script src="../vendors/app-assets/js/scripts/extensions/ext-component-sweet-alerts.js"></script> -->
+
     <!-- BEGIN: Page JS-->
     <script src="../vendors/app-assets/js/scripts/pages/dashboard-analytics.js"></script>
     <!-- <script

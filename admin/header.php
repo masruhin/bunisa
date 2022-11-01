@@ -135,7 +135,7 @@
             <a class="dropdown-item" href="page-account-settings.html">
               <i class="mr-50" data-feather="settings"></i>
               Settings</a>
-            <a class="dropdown-item" href="page-auth-login-v2.html">
+            <a class="dropdown-item" href="login.php">
               <i class="mr-50" data-feather="power"></i>
               Logout</a>
           </div>

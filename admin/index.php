@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (empty($_SESSION['namauser']) and empty($_SESSION['passuser'])) {
+    header('locatin:login.php');
+}else {
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 
@@ -129,3 +135,6 @@
     <!-- END: Body-->
 
 </html>
+<?php 
+} 
+?>
