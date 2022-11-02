@@ -2,6 +2,7 @@
 session_start();
 include "koneksi.php";
 
+
 $username = $db->real_escape_string(stripslashes(strip_tags(htmlspecialchars(htmlspecialchars($_POST['username']), ENT_QUOTES))));
 $pass = $db->real_escape_string(stripslashes(strip_tags(htmlspecialchars(htmlspecialchars($_POST['password']), ENT_QUOTES))));
 
@@ -20,7 +21,9 @@ if (!ctype_alnum($username) or !ctype_alnum($pass)) {
   }elseif (password_verify($pass, $passhash)){  
     //jika pwd dan username ditemukan
     if ($ada->num_rows > 0) {
-      session_start();
+      if (!isset($_SESSION)) {
+        session_start();
+      } 
       $_SESSION['namauser'] = $r->username;
       $_SESSION['passuser'] = $r->password;
       $_SESSION['level']    = $r->level;

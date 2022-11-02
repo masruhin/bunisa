@@ -1,6 +1,7 @@
 <?php
 session_start();
-include "koneksi.php"; ?>
+include "koneksi.php";
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -44,6 +45,10 @@ include "koneksi.php"; ?>
   <link rel="stylesheet" type="text/css" href="../vendors/assets/css/style.css">
   <!-- END: Custom CSS-->
 
+  <script src="../vendors/app-assets/vendors/js/jquery/jquery.min.js"></script>
+  <script src="../vendors/app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+  <script src="../vendors/app-assets/vendors/js/extensions/polyfill.min.js"></script>
+  <script src="../vendors/app-assets/js/scripts/extensions/ext-component-sweet-alerts.js"></script>
 </head>
 <!-- END: Head-->
 
@@ -95,28 +100,57 @@ include "koneksi.php"; ?>
             <!-- Login-->
             <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
               <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                <h2 class="card-title font-weight-bold mb-1">Selamat Datang! 👋</h2>
                 <?php
+
                 if (!empty($_GET['msg'])) {
                   if ($_GET['msg'] == 1) {
-                    echo "<script>
-                          
-                          </script>";
+                    echo '<script type="text/javascript">
+                            $(document).ready(function(){
+                              Swal.fire({
+                              title: "Silahkan Login",
+                              icon: "info",
+                              customClass: {
+                                confirmButton: "btn btn-primary"
+                              },
+                              buttonsStyling: false
+                            });
+                          });
+                        </script>';
+
                   } elseif ($_GET['msg'] == 2) {
-                    echo "<script type='text/javascript'>
-                          
-                        </script>";
+                    echo '<script type="text/javascript">
+                            $(document).ready(function(){
+                              Swal.fire({
+                              title: "Login Berhasil..",
+                              icon: "success",
+                              customClass: {
+                                confirmButton: "btn btn-primary"
+                              },
+                              buttonsStyling: false
+                            });
+                          });
+                        </script>';
                   } elseif ($_GET['msg'] == 3) {
-                    echo "<script type='text/javascript'>
-                          
-                        </script>";
+                    echo '<script type="text/javascript">
+                            $(document).ready(function(){
+                              Swal.fire({
+                              title: "Akun Tidak Ditemukan",
+                              icon: "error",
+                              customClass: {
+                                confirmButton: "btn btn-primary"
+                              },
+                              buttonsStyling: false
+                            });
+                          });
+                        </script>';
                   }
                 }
                 ?>
+                <h2 class="card-title font-weight-bold mb-1">Selamat Datang! 👋</h2>
                 <form class="auth-login-form mt-2" action="cek_login.php" method="POST">
                   <div class="form-group">
                     <label class="form-label" for="username">Username</label>
-                    <input class="form-control" type="text" name="username" placeholder="Masukan Username" aria-describedby="login-email" autofocus="" tabindex="1" />
+                    <input class="form-control" type="text" name="username" id="username" placeholder="Masukan Username" aria-describedby="login-email" autofocus="" tabindex="1" />
                   </div>
                   <div class="form-group">
                     <div class="d-flex justify-content-between">
@@ -127,7 +161,7 @@ include "koneksi.php"; ?>
                       <div class="input-group-append"><span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span></div>
                     </div>
                   </div>
-                  <button class="btn btn-primary btn-block" tabindex="4" >Masuk</button>
+                  <button class="btn btn-primary btn-block" tabindex="4" id="submit">Masuk</button>
                 </form>
                 <p class="text-center mt-2"><span>Pengguna Baru?</span><a href="page-auth-register-v2.html"><span>&nbsp;Buat Akun</span></a></p>
               </div>
@@ -150,18 +184,23 @@ include "koneksi.php"; ?>
   <!-- END: Page Vendor JS-->
 
   <script src="../vendors/app-assets/vendors/js/ui/jquery.sticky.js"></script>
-  <script src="../vendors/app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
   <script src="../vendors/app-assets/vendors/js/extensions/polyfill.min.js"></script>
   <!-- BEGIN: Theme JS-->
   <script src="../vendors/app-assets/js/core/app-menu.js"></script>
   <script src="../vendors/app-assets/js/core/app.js"></script>
+  <script src="../vendors/app-assets/vendors/js/jquery/jquery.min.js"></script>
   <!-- END: Theme JS-->
 
   <!-- BEGIN: Page JS-->
   <script src="../vendors/app-assets/js/scripts/pages/page-auth-login.js"></script>
-  <script src="../vendors/app-assets/js/scripts/extensions/ext-component-sweet-alerts.js"></script>
   <!-- END: Page JS-->
 
+  <!-- START SWEEET ALERT -->
+  <script src="../vendors/app-assets/vendors/js/jquery/jquery.min.js"></script>
+  <script src="../vendors/app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+  <script src="../vendors/app-assets/vendors/js/extensions/polyfill.min.js"></script>
+  <script src="../vendors/app-assets/js/scripts/extensions/ext-component-sweet-alerts.js"></script>
+  <!-- END SWEEET ALERT -->
   <script>
     $(window).on('load', function() {
       if (feather) {

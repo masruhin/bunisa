@@ -12,7 +12,6 @@ if (empty($_SESSION['namauser']) and empty($_SESSION['passuser'])) {
     <!-- END: Head-->
 
     <!-- BEGIN: Body-->
-
     <body
         class="horizontal-layout horizontal-menu  navbar-floating footer-static  "
         data-open="hover"

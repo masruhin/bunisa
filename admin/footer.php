@@ -17,7 +17,7 @@
     <!-- BEGIN: Page Vendor JS-->
     <script src="../vendors/app-assets/vendors/js/ui/jquery.sticky.js"></script>
     <script src="../vendors/app-assets/vendors/js/charts/apexcharts.min.js"></script>
-    <script src="../vendors/app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <!-- <script src="../vendors/app-assets/vendors/js/extensions/toastr.min.js"></script> -->
     <script src="../vendors/app-assets/vendors/js/extensions/moment.min.js"></script>
     <script src="../vendors/app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
     <script src="../vendors/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>

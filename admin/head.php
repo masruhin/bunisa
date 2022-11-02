@@ -19,7 +19,7 @@
   <!-- BEGIN: Vendor CSS-->
   <link rel="stylesheet" type="text/css" href="../vendors/app-assets/vendors/css/vendors.min.css">
   <link rel="stylesheet" type="text/css" href="../vendors/app-assets/vendors/css/charts/apexcharts.css">
-  <link rel="stylesheet" type="text/css" href="../vendors/app-assets/vendors/css/extensions/toastr.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../vendors/app-assets/vendors/css/extensions/toastr.min.css"> -->
   <link rel="stylesheet" type="text/css" href="../vendors/app-assets/vendors/css/tables/datatable/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" type="text/css" href="../vendors/app-assets/vendors/css/tables/datatable/responsive.bootstrap.min.css">
   <!-- END: Vendor CSS-->
