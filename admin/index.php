@@ -1,4 +1,5 @@
 <?php
+include "koneksi.php";
 session_start();
 if (empty($_SESSION['namauser']) and empty($_SESSION['passuser'])) {
     header('locatin:login.php');
