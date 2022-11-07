@@ -40,6 +40,7 @@
                 <a href="#" data-toggle="dropdown"> <i data-feather="' . $r->icon . '"></i> <span>' . $r->nama_modulutama . '</span>
                 </a>
                 <ul class="dropdown-menu">';
+
         while ($w = $adasub->fetch_object()) {
           echo '
                 <li data-menu="">
